@@ -1,0 +1,75 @@
+{
+  "name": "palette",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@google/generative-ai": "^0.24.1",
+    "@mui/icons-material": "^5.16.4",
+    "@mui/material": "^5.16.4",
+    "@supabase/supabase-js": "^2.50.5",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@twilio/conversations": "^2.6.2",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^18.19.112",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/react-slick": "^0.23.13",
+    "dotenv": "^17.2.0",
+    "motion": "^11.15.0",
+    "pdfjs-dist": "^5.3.93",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-dropzone": "^14.3.8",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.25.1",
+    "react-slick": "^0.30.3",
+    "recharts": "^3.1.0",
+    "slick-carousel": "^1.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "web-vitals": "^2.1.4",
+    "zustand": "^5.0.6"
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "CI=true node --test --import tsx --test-reporter tap",
+    "seed:shipments": "tsx scripts/seedShipments.ts",
+    "seed:quotes": "tsx scripts/seedQuotes.ts"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.10",
+    "@vitejs/plugin-react": "^4.5.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.10",
+    "tsx": "^4.20.3",
+    "vite": "^5.4.19"
+  }
+}
