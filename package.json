@@ -1,0 +1,28 @@
+{
+  "name": "palette-mono",
+  "private": true,
+  "workspaces": [
+    "Palette",
+    "palette_backend",
+    "paletteshipper"
+  ],
+  "scripts": {
+    "build": "sh -c 'command -v turbo >/dev/null 2>&1 && turbo run build || npm -ws --if-present run build'",
+    "dev": "sh -c 'if command -v turbo >/dev/null 2>&1; then (turbo run dev --parallel --filter=palette --filter=paletteshipperfront & npm --workspace palette_backend run dev & wait); else (npm --workspace Palette run dev & npm --workspace paletteshipper run dev & npm --workspace palette_backend run dev & wait); fi'",
+    "lint": "sh -c 'command -v turbo >/dev/null 2>&1 && turbo run lint || npm -ws --if-present run lint'",
+    "test": "sh -c 'command -v turbo >/dev/null 2>&1 && turbo run test || npm -ws --if-present run test'",
+    "ci:build": "CI=true npm run build",
+    "ci:test": "CI=true npm run test",
+    "ci:all": "CI=true npm run build && CI=true npm run test"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.6"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.9.2",
+  "dependencies": {
+    "@google-cloud/vertexai": "^1.10.0"
+  }
+}

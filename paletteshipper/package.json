@@ -1,0 +1,57 @@
+{
+  "name": "paletteshipperfront",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "CI=true node --test src/__tests__/smoke.test.js src/lib/__tests__/deadlineCore.test.js src/lib/__tests__/lineItemDrafts.test.js --test-reporter tap"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.3.1",
+    "@supabase/supabase-js": "^2.52.1",
+    "@twilio/conversations": "^2.6.4",
+    "immer": "^10.1.1",
+    "motion": "^11.15.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.25.1",
+    "typescript": "^5.5.4",
+    "zustand": "^5.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.112",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "vite": "^5.4.19"
+  }
+}

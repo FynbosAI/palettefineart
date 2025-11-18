@@ -1,0 +1,44 @@
+{
+  "name": "palette-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "TypeScript backend for PNG image processing and AI analysis",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx --watch dev/server.ts",
+    "dev:server": "vercel dev --listen 3002",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "deploy": "vercel --prod",
+    "test": "CI=true node --test --test-reporter tap",
+    "backfill:twilio": "tsx scripts/backfillTwilioParticipants.ts"
+  },
+  "engines": {
+    "node": "^20 || ^22"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@google-cloud/vertexai": "^1.10.0",
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.55.0",
+    "@types/cors": "^2.8.19",
+    "@types/multer": "^1.4.13",
+    "@types/node": "^20.10.6",
+    "@vercel/node": "^3.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.1.0",
+    "express": "^4.19.2",
+    "fast-xml-parser": "^4.3.6",
+    "fastify": "^5.6.1",
+    "jszip": "^3.10.1",
+    "multer": "^1.4.5-lts.1",
+    "pdf-lib": "^1.17.1",
+    "sharp": "^0.33.5",
+    "twilio": "^5.10.1"
+  },
+  "devDependencies": {
+    "@types/jszip": "^3.4.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
